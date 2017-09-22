@@ -1,0 +1,24 @@
+---
+galaxy_info:
+  author: Kevin Wennemuth
+  description: Ansible role to manage macOS timezone settings.
+  license: MIT
+  min_ansible_version: 2.3
+  platforms:
+    - name: Darwin
+      versions:
+        - all
+  galaxy_tags:
+    - system
+    - osx
+    - macos
+    - config
+    - timezone
+    - currency
+    - metrics
+dependencies:
+  - { role: feffi.macos-defaults,
+      macos_defaults: {
+        defaults: []
+      }
+    }

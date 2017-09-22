@@ -1,0 +1,15 @@
+---
+- name: "Set the timezone to {{ macos_settings.timezone }}"
+  become: true
+  command: 'systemsetup -settimezone "{{ macos_settings.timezone }}" > /dev/null'
+  when: macos_timezone.timezone
+
+
+- name: Set macOS defaults
+  include_role:
+    name: feffi.macos-defaults
+  vars:
+    macos_defaults:
+      defaults:
+        - { domain: "com.apple.BezelServices", key: "kDim", type: "boolean", value: "{{ macos_standby.bezel_dim }}", description: "Automatically illuminate built-in MacBook keyboard in low light" }
+

@@ -1,0 +1,4 @@
+---
+macos_timezone:
+  # Set the timezone; see `systemsetup -listtimezones` for other values
+  timezone: "Europe/Berlin"
