@@ -28,7 +28,7 @@ macos_timezone:
   timezone: "Europe/Berlin"
 
   # Set 24-Hour time scale
-  24hour: true
+  twentyfour: true
 
   # Set the current locale
   locale: "de_DE"
@@ -56,7 +56,7 @@ None.
       vars:
         macos_timezone:
           timezone: "Europe/Berlin"
-          24hour: true
+          twentyfour: true
           locale: "de_DE"
           currency: "EUR"
           languages: [ "de", "en" ]
@@ -72,8 +72,8 @@ Or with local parameters:
       roles:
         - { role: feffi.macos-timezone,
             macos_timezone: {
-              timezone: "Europe/Berlin"
-              24hour: true,
+              timezone: "Europe/Berlin",
+              twentyfour: true,
               locale: "de_DE",
               currency: "EUR",
               languages: [ "de", "en" ],

@@ -5,7 +5,7 @@
     DEBUG: true
     macos_timezone:
       timezone: "Europe/Berlin"
-      24hour: true
+      twentyfour: true
       locale: "de_DE"
       currency: "EUR"
       languages: [ "de", "en" ]

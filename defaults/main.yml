@@ -4,7 +4,7 @@ macos_timezone:
   timezone: "Europe/Berlin"
 
   # Set 24-Hour time scale
-  24hour: true
+  twentyfour: true
 
   # Set the current locale
   locale: "de_DE"
