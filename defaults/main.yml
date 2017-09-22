@@ -2,3 +2,21 @@
 macos_timezone:
   # Set the timezone; see `systemsetup -listtimezones` for other values
   timezone: "Europe/Berlin"
+
+  # Set 24-Hour time scale
+  24hour: true
+
+  # Set the current locale
+  locale: "de_DE"
+
+  # Set the current currency
+  currency: "EUR"
+
+  # Set available default languages
+  languages: [ "de", "en" ]
+
+  # Set locale to metric units scale
+  use_metric_units: true
+
+  # Set the current measurement units
+  measurement_units: "Centimeters"

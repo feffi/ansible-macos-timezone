@@ -5,6 +5,11 @@
     DEBUG: true
     macos_timezone:
       timezone: "Europe/Berlin"
-
+      24hour: true
+      locale: "de_DE"
+      currency: "EUR"
+      languages: [ "de", "en" ]
+      use_metric_units: true
+      measurement_units: "Centimeters"
   roles:
     - { role: ansible-macos-timezone }

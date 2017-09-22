@@ -1,9 +1,8 @@
 ---
-- name: "Set the timezone to {{ macos_settings.timezone }}"
+- name: "Set the timezone to {{ macos_settings.timezone }}; see `systemsetup -listtimezones` for other values"
   become: true
   command: 'systemsetup -settimezone "{{ macos_settings.timezone }}" > /dev/null'
   when: macos_timezone.timezone
-
 
 - name: Set macOS defaults
   include_role:
@@ -11,5 +10,9 @@
   vars:
     macos_defaults:
       defaults:
-        - { domain: "com.apple.BezelServices", key: "kDim", type: "boolean", value: "{{ macos_standby.bezel_dim }}", description: "Automatically illuminate built-in MacBook keyboard in low light" }
+        - { domain: "NSGlobalDomain", key: "AppleICUForce12HourTime", type: "boolean", value: "{{ not macos_timezone.24hours }}", description: "Set 24-Hour time scale" }
+        - { domain: "NSGlobalDomain", key: "AppleMeasurementUnits", type: "string", value: "{{ macos_timezone.measurement_units }}", description: "Set the current measurement units" }
+        - { domain: "NSGlobalDomain", key: "AppleMetricUnits", type: "boolean", value: "{{ macos_timezone.use_metric_units }}", description: "Set locale to metric units scale" }
+        - { domain: "NSGlobalDomain", key: "AppleLocale", type: "string", value: "{{ macos_timezone.locale }}@currency={{ macos_timezone.currency }}", description: "Set the current system locale" }
+        - { domain: "NSGlobalDomain", key: "AppleLanguages", type: "array", value: "{{ macos_timezone.languages }}", description: "Set available default languages" }
 
