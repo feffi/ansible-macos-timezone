@@ -1,5 +1,5 @@
 # ansible-macos-timezone
-
+Ansible role to manage timezone settings in macOS.
 
 [![Build Status](https://img.shields.io/travis/feffi/ansible-macos-timezone.svg)](https://travis-ci.org/feffi/ansible-macos-timezone) [![Github All Releases](https://img.shields.io/github/downloads/feffi/ansible-macos-timezone/total.svg)](https://github.com/feffi/ansible-macos-timezone) [![GitHub forks](https://img.shields.io/github/forks/feffi/ansible-macos-timezone.svg?style=social&label=Fork)](https://github.com/feffi/ansible-macos-timezone) [![GitHub stars](https://img.shields.io/github/stars/feffi/ansible-macos-timezone.svg?style=social&label=Star)](https://github.com/feffi/ansible-macos-timezone) [![GitHub watchers](https://img.shields.io/github/watchers/feffi/ansible-macos-timezone.svg?style=social&label=Watch)](https://github.com/feffi/ansible-macos-timezone) [![Twitter Follow](https://img.shields.io/twitter/follow/feffi1.svg?style=social&label=Follow)](https://twitter.com/feffi1) [![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/feffi/ansible-macos-timezone/blob/master/LICENSE)
 
