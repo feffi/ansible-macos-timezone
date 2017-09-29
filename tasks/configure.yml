@@ -1,8 +1,15 @@
 ---
+- name: Determine old timezone
+  become: true
+  shell: "systemsetup -gettimezone | awk -F ': ' '{print $2}'"
+  when: macos_timezone.timezone
+  register: timezone_old
+  changed_when: false
+
 - name: "Set the timezone to {{ macos_timezone.timezone }}; see 'systemsetup -listtimezones' for other values"
   become: true
-  command: "systemsetup -settimezone {{ macos_timezone.timezone }} > /dev/null"
-  when: macos_timezone.timezone
+  command: "systemsetup -settimezone '{{ macos_timezone.timezone }}'"
+  when: macos_timezone.timezone and timezone_old.stdout != macos_timezone.timezone
 
 - name: Set macOS defaults
   include_role:
