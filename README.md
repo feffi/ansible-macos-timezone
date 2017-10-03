@@ -44,6 +44,9 @@ macos_timezone:
 
   # Set the current measurement units
   measurement_units: "Centimeters"
+
+  # Set the current Temperatur unit
+  temperature_units: "Celsius"
 ```
 
 ## Dependencies
@@ -62,6 +65,7 @@ None.
           languages: [ "de", "en" ]
           use_metric_units: true
           measurement_units: "Centimeters"
+          temperature_units: "Celsius"
       roles:
         - { role: feffi.macos-timezone }
 ```
@@ -78,7 +82,8 @@ Or with local parameters:
               currency: "EUR",
               languages: [ "de", "en" ],
               use_metric_units: true,
-              measurement_units: "Centimeters"
+              measurement_units: "Centimeters",
+              temperature_units: "Celsius"
             }
           }
 ```

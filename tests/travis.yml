@@ -11,5 +11,6 @@
       languages: [ "de", "en" ]
       use_metric_units: true
       measurement_units: "Centimeters"
+      temperature_units: "Celsius"
   roles:
     - { role: ansible-macos-timezone }
