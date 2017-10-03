@@ -22,4 +22,4 @@
         - { domain: "NSGlobalDomain", key: "AppleMetricUnits", type: "boolean", value: "{{ macos_timezone.use_metric_units }}", description: "Set locale to metric units scale" }
         - { domain: "NSGlobalDomain", key: "AppleLocale", type: "string", value: "{{ macos_timezone.locale }}@currency={{ macos_timezone.currency }}", description: "Set the current system locale" }
         - { domain: "NSGlobalDomain", key: "AppleLanguages", type: "array", value: "{{ macos_timezone.languages }}", description: "Set available default languages" }
-        - { domain: "NSGlobalDomain", key: "AppleTemperatureUnit", type: "string", value: "{{ macos_timezone.temperature_units }}", description: "Set the current Temperatur unit" }
+        - { domain: "NSGlobalDomain", key: "AppleTemperatureUnit", type: "string", value: "{{ macos_timezone.temperature_units }}", description: "Set the current temperature unit" }

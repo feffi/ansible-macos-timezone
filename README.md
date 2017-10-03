@@ -45,7 +45,7 @@ macos_timezone:
   # Set the current measurement units
   measurement_units: "Centimeters"
 
-  # Set the current Temperatur unit
+  # Set the current temperature unit
   temperature_units: "Celsius"
 ```
 
